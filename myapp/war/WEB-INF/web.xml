@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Home</servlet-name>
+		<servlet-class>com.myapp.HomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Myapp</servlet-name>
+		<servlet-class>com.myapp.MyappServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Myapp</servlet-name>
+		<url-pattern>/myapp</url-pattern>
+	</servlet-mapping>
+	 <servlet-mapping>
+     <servlet-name>Myapp</servlet-name>
+     <url-pattern>/_ah/channel/connected/</url-pattern>
+ </servlet-mapping> 
+	<!-- Default App Engine configuration -->
+	<servlet>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+		<init-param>
+			<param-name>services</param-name>
+			<param-value/>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<url-pattern>/_ah/spi/*</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	 <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>profile</web-resource-name>
+            <url-pattern>/profile/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>*</role-name>
+        </auth-constraint>
+    </security-constraint>
+     <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>admin</web-resource-name>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+</web-app>

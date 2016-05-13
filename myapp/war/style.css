@@ -1,0 +1,84 @@
+html { 
+  background:  url(bg-page.jpg) no-repeat center center fixed; 
+  background-size: cover;
+}
+h1{
+  font-family: 'Verdana';
+  font-size: 3em;
+  margin: .2em .5em;
+  color: black;
+}
+h4{
+  font-family: 'Verdana';
+  font-size: 1em;
+  margin: .2em .5em;
+    text-align: right;
+  color: black;
+}
+body {
+    height: 100%;
+}
+textarea {
+    resize: none;
+    outline: none;  
+	border-radius: 10px;
+	height: 400px !important;
+	width: 600px !important;
+    background-color: white;
+    font-size: 1em;
+    margin: .2em .5em;
+    color: black;
+}
+
+input {
+    resize: none;
+    outline: none;  
+	border-radius: 10px;
+	height: 30px;
+	width: 230px;
+    font-size: 1em;
+    margin: .2em .5em;
+    color: black;
+}
+
+a:link {
+    color: rgb( 255, 153, 0);
+}
+
+
+/* visited link */
+a:visited {
+  color: rgb( 255, 153, 0);
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+     color: hotpink;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: grey; 
+    border-radius: 12px; 
+    font-size: 15px;
+    font-family: verdana;
+ 
+}
